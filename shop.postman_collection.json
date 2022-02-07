@@ -1,0 +1,646 @@
+{
+	"info": {
+		"_postman_id": "576ae95a-5200-461a-9479-dff7bed52403",
+		"name": "shop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createPerson1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": 1,\r\n\"firstName\": \"test\",\r\n\"lastName\": \"test\",\r\n\"age\":20,\r\n\"phoneNumber\" :\"1234567890\",\r\n\"email\":\"test@test.ua\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/person/createPerson",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"person",
+						"createPerson"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createPerson2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"firstName\": \"sample\",\r\n\"lastName\": \"sample\",\r\n\"age\": 34,\r\n\"phoneNumber\" :\"saasasa\",\r\n\"email\" :\"sample@sample.ua\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/person/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"person",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updatePerson1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": 1,\r\n\"firstName\": \"test\",\r\n\"lastName\": \"test\",\r\n\"age\":20,\r\n\"phoneNumber\" :\"1234567890\",\r\n\"email\":\"test@test.ua\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/person/createPerson",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"person",
+						"createPerson"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllPersons",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": 2,\r\n\"firstName\": \"test\",\r\n\"lastName\": \"test\",\r\n\"age\":20,\r\n\"phoneNumber\" :\"11\",\r\n\"email\":\"aa@aa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/person/createPerson",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"person",
+						"createPerson"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createShop1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": 555,\r\n\"category\": \"home\",\r\n\"name\": \"soup\",\r\n\"price\": 7.5,\r\n\"currency\": \"UAH\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/product/createProduct",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"product",
+						"createProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createShop2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": 555,\r\n\"category\": \"home\",\r\n\"name\": \"soup\",\r\n\"price\": 7.5,\r\n\"currency\": \"UAH\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/product/createProduct",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"product",
+						"createProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllShop",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": 555,\r\n\"category\": \"home\",\r\n\"name\": \"soup\",\r\n\"price\": 7.5,\r\n\"currency\": \"UAH\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/product/createProduct",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"product",
+						"createProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteShop1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": 555,\r\n\"category\": \"home\",\r\n\"name\": \"soup\",\r\n\"price\": 7.5,\r\n\"currency\": \"UAH\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/product/createProduct",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"product",
+						"createProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteShop1 byName",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": 555,\r\n\"category\": \"home\",\r\n\"name\": \"soup\",\r\n\"price\": 7.5,\r\n\"currency\": \"UAH\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/product/createProduct",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"product",
+						"createProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllCarts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/person/1/cart/getAll",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"person",
+						"1",
+						"cart",
+						"getAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delCart",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": 2,\r\n\"firstName\": \"test\",\r\n\"lastName\": \"test\",\r\n\"age\":20,\r\n\"phoneNumber\" :\"11\",\r\n\"email\":\"aa@aa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/person/createPerson",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"person",
+						"createPerson"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createProduct1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": 555,\r\n\"category\": \"home\",\r\n\"name\": \"soup\",\r\n\"price\": 7.5,\r\n\"currency\": \"UAH\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/product/createProduct",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"product",
+						"createProduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createProduct2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"shop\": {\"name\": \"GGG\"},\r\n\"name\": \"ggg\",\r\n\"price\": 111.1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/product/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createProduct3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": 222,\r\n\"category\": \"garden\",\r\n\"name\": \"flouer\",\r\n\"price\": 114,2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/person/createPerson",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"person",
+						"createPerson"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllProducts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": 2,\r\n\"firstName\": \"test\",\r\n\"lastName\": \"test\",\r\n\"age\":20,\r\n\"phoneNumber\" :\"11\",\r\n\"email\":\"aa@aa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/person/createPerson",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"person",
+						"createPerson"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": 2,\r\n\"firstName\": \"test\",\r\n\"lastName\": \"test\",\r\n\"age\":20,\r\n\"phoneNumber\" :\"11\",\r\n\"email\":\"aa@aa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/person/createPerson",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"person",
+						"createPerson"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delProduct by Shop",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": 2,\r\n\"firstName\": \"test\",\r\n\"lastName\": \"test\",\r\n\"age\":20,\r\n\"phoneNumber\" :\"11\",\r\n\"email\":\"aa@aa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/product/delete/shop/332",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						"delete",
+						"shop",
+						"332"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllProductsByName",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": 2,\r\n\"firstName\": \"test\",\r\n\"lastName\": \"test\",\r\n\"age\":20,\r\n\"phoneNumber\" :\"11\",\r\n\"email\":\"aa@aa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/person/createPerson",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"person",
+						"createPerson"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buyProduct",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": 2,\r\n\"firstName\": \"test\",\r\n\"lastName\": \"test\",\r\n\"age\":20,\r\n\"phoneNumber\" :\"11\",\r\n\"email\":\"aa@aa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/person/createPerson",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"person",
+						"createPerson"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cancelBuy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": 2,\r\n\"firstName\": \"test\",\r\n\"lastName\": \"test\",\r\n\"age\":20,\r\n\"phoneNumber\" :\"11\",\r\n\"email\":\"aa@aa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/person/createPerson",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"person",
+						"createPerson"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllCartsByPerson",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": 2,\r\n\"firstName\": \"test\",\r\n\"lastName\": \"test\",\r\n\"age\":20,\r\n\"phoneNumber\" :\"11\",\r\n\"email\":\"aa@aa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/person/createPerson",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"person",
+						"createPerson"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCartById",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"id\": 2,\r\n\"firstName\": \"test\",\r\n\"lastName\": \"test\",\r\n\"age\":20,\r\n\"phoneNumber\" :\"11\",\r\n\"email\":\"aa@aa\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/person/createPerson",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"person",
+						"createPerson"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
