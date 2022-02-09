@@ -17,12 +17,8 @@ import java.util.Optional;
 @Service
 public class CartServiceImpl implements CartService {
 
-    private CartRepository cartRepository;
-
     @Autowired
-    public void setCartRepository(CartRepository cartRepository) {
-        this.cartRepository = cartRepository;
-    }
+    private CartRepository cartRepository;
 
     @Override
     public Long createCart(Cart cart) {

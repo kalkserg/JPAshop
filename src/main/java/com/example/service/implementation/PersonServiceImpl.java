@@ -14,12 +14,8 @@ import static com.example.converter.PersonConverter.personConverter;
 @Service
 public class PersonServiceImpl implements PersonService {
 
-    private PersonRepository personRepository;
-
     @Autowired
-    public void setPersonRepository(PersonRepository personRepository) {
-        this.personRepository = personRepository;
-    }
+    private PersonRepository personRepository;
 
 
     @Override

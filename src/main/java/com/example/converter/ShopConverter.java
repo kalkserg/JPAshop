@@ -4,7 +4,7 @@ import com.example.entity.Shop;
 
 public final class ShopConverter {
 
-    public static Shop ShopConverter(Shop updateShop, Shop savedShop) {
+    public static Shop shopConverter(Shop updateShop, Shop savedShop) {
         savedShop.setName(updateShop.getName());
         return savedShop;
     }

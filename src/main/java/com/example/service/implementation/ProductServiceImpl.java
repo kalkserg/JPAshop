@@ -5,27 +5,23 @@ import com.example.entity.Shop;
 import com.example.repository.ProductRepository;
 import com.example.service.ProductService;
 import com.example.service.ShopService;
-import com.example.service.exception.ShopNotFoundException;
 import com.example.service.exception.ThereIsNoSuchProductException;
+import com.example.service.exception.ThereIsNoSuchShopException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
-import static com.example.converter.ProductConverter.ProductConverter;
+import static com.example.converter.ProductConverter.productConverter;
 
 @Service
 public class ProductServiceImpl implements ProductService {
 
+    @Autowired
     private ProductRepository productRepository;
     @Autowired
     private ShopService shopService;
-
-    @Autowired
-    public void setProductRepository(ProductRepository productRepository) {
-        this.productRepository = productRepository;
-    }
 
     @Override
     public Product getProductById(Long id) {
@@ -42,7 +38,9 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public Long createProduct(Product product) {
         Shop shop = shopService.getShopByName(product.getShop().getName());
-        if (shop == null) throw new ShopNotFoundException();
+        if (shop == null) {
+            throw new ThereIsNoSuchShopException();
+        }
         product.setShop(shop);
         return productRepository.save(product).getId();
     }
@@ -50,7 +48,7 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public Product updateProduct(Product product) {
         Product oldProduct = productRepository.findById(product.getId()).orElseGet(Product::new);
-        return productRepository.save(ProductConverter(product, oldProduct));
+        return productRepository.save(productConverter(product, oldProduct));
     }
 
     @Override
@@ -72,7 +70,7 @@ public class ProductServiceImpl implements ProductService {
         try {
             productRepository.deleteAllByShop(shop);
         } catch (Exception ex) {
-            throw new ShopNotFoundException();
+            throw new ThereIsNoSuchShopException();
         }
     }
 }

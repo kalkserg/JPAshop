@@ -1,6 +1,5 @@
 package com.example.service.exception;
 
-import com.example.service.exception.ShopNotFoundException;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.springframework.http.HttpStatus;
@@ -12,7 +11,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 @ControllerAdvice
 public class AwesomeExceptionHandler extends ResponseEntityExceptionHandler {
 
-    @ExceptionHandler(ShopNotFoundException.class)
+    @ExceptionHandler(ThereIsNoSuchShopException.class)
     protected ResponseEntity<AwesomeException> handleThereIsNoSuchShopException() {
         return new ResponseEntity<>(new AwesomeException("There is no such shop"), HttpStatus.NOT_FOUND);
     }

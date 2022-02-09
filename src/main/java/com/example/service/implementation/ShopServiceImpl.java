@@ -5,33 +5,28 @@ import com.example.repository.ProductRepository;
 import com.example.repository.ShopRepository;
 import com.example.service.CartService;
 import com.example.service.ShopService;
-import com.example.service.exception.ShopNotFoundException;
+import com.example.service.exception.ThereIsNoSuchShopException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
-import static com.example.converter.ShopConverter.ShopConverter;
+import static com.example.converter.ShopConverter.shopConverter;
 
 @Service
 public class ShopServiceImpl implements ShopService {
 
+    @Autowired
     private ShopRepository shopRepository;
     @Autowired
     private ProductRepository productRepository;
     @Autowired
     private CartService cartService;
 
-    @Autowired
-    public void setShopRepository(ShopRepository shopRepository) {
-        this.shopRepository = shopRepository;
-    }
-
 
     @Override
     public Shop getShopById(Long id) {
-        Optional<Shop> Shop = shopRepository.findById(id);
-        return Shop.orElseGet(Shop::new);
+        return shopRepository.findById(id).orElseThrow(()->new ThereIsNoSuchShopException());
     }
 
     @Override
@@ -47,19 +42,15 @@ public class ShopServiceImpl implements ShopService {
     @Override
     public Shop updateShop(Shop Shop) {
         Shop oldShop = shopRepository.findById(Shop.getId()).orElseGet(Shop::new);
-        return shopRepository.save(ShopConverter(Shop, oldShop));
+        return shopRepository.save(shopConverter(Shop, oldShop));
     }
 
     @Override
     public void deleteById(Long id) {
-        Shop shop = shopRepository.findById(id).orElse(null);
-        if (shop != null) {
-            cartService.deleteAllByShop(shop);
-            productRepository.deleteAllByShop(shop);
-            shopRepository.deleteShopById(id);
-        } else {
-            throw new ShopNotFoundException();
-        }
+        Shop shop = shopRepository.findById(id).orElseThrow(() -> new ThereIsNoSuchShopException());
+        cartService.deleteAllByShop(shop);
+        productRepository.deleteAllByShop(shop);
+        shopRepository.deleteShopById(id);
     }
 
     @Override
